@@ -1,7 +1,7 @@
-# tql
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+# Angularjs-lazyloading-requirejs-with-karmatest
+Angularjs app which support lazy loading using requirejs,also writes a test using karma.
+
 
 ## Build & development
 
