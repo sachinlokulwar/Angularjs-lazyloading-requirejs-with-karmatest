@@ -29,6 +29,7 @@ module.exports = function(config) {
       'bower_components/requirejs/require.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
+     
       {pattern: 'app/scripts/*.js', included: false},
       {pattern: 'app/scripts/**/*.js', included: false},
       {pattern: 'test/spec/lazyMock.js', included: false},

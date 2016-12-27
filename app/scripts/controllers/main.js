@@ -20,7 +20,7 @@
 
 	app.register.controller('MainCtrl', MainCtrl);*/
 
-	app.controller('MainCtrl', ['$scope', function($scope)
+	app.register.controller('MainCtrl', ['$scope', function($scope)
     {
         $scope.page =
         {

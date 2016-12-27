@@ -1,3 +1,4 @@
+'use strict';
 define([], function()
 {
     return {
@@ -19,5 +20,5 @@ define([], function()
                     ]
             }
         }
-    }
+    };
 });

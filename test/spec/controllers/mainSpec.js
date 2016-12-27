@@ -5,7 +5,7 @@ module('tqlApp', function(app)
 	console.log(app)
 });
 
-define(['scripts/controllers/main'], function(app)
+/*define(['scripts/controllers/main'], function(app)
 {
 	describe("The 'Main'", function()
 	{
@@ -44,6 +44,27 @@ define(['scripts/controllers/main'], function(app)
 		{
 			//expect(true).toBe(true);
 			expect($scope.page.heading).toBe('Home Page');
+		});
+	});
+});*/
+
+define(['angular','scripts/controllers/main','angularMocks'], function(angular,MainCtrl)
+{
+	describe("The 'Main'", function()
+	{
+
+		beforeEach(angular.mock.module(function($controllerProvider) {
+	        $controllerProvider.register('MainCtrl', MainCtrl);
+	    }));
+
+		it("test", function()
+		{
+			expect(true).toBe(true);
+			
+		});
+		it("should set the page heading to 'Home Page'", function($controller)
+		{
+			expect($controller('MainCtrl')($scope.page.heading)).toBe('Home Page');
 		});
 	});
 });

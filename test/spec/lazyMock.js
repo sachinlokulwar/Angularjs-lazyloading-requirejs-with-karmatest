@@ -1,6 +1,6 @@
 define(function() {
   var app = angular.module('tqlApp', ['ngRoute', 'routeResolverServices']);
-  app.lazy = app;
+  app.register = app;
 
   return app;
 });

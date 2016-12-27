@@ -21,7 +21,7 @@ define(['scripts/app'], function (app) {
 	app.register.controller('AboutCtrl', AboutCtrl);
 */
 
-  app.controller('AboutCtrl', ['$scope', function($scope)
+  app.register.controller('AboutCtrl', ['$scope', function($scope)
     {
         $scope.page =
         {

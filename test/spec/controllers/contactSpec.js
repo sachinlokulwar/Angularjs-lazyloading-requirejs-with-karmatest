@@ -5,45 +5,24 @@ module('tqlApp', function(app)
 	console.log(app)
 });
 
-define(['scripts/controllers/contact'], function(app)
+define(['angular','scripts/controllers/contact','angularMocks'], function(angular,ContactCtrl)
 {
 	describe("The 'Contact'", function()
 	{
-		var $rootScope;
-		var $controller;
-		var $scope;
 
-		beforeEach(function()
-		{
-
-			module('tqlApp');
-
-			inject
-			([
-				'$injector',
-				'$rootScope',
-				'$controller',
-
-				function($injector, _$rootScope, _$controller)
-				{
-					$rootScope = _$rootScope;
-					$scope = $rootScope.$new();
-					$controller = _$controller;
-				}
-			]);
-
-			$controller('ContactCtrl', {$scope:$scope});
-		});
+		beforeEach(angular.mock.module(function($controllerProvider) {
+	        $controllerProvider.register('ContactCtrl', ContactCtrl);
+	    }));
 
 		it("test", function()
 		{
 			expect(true).toBe(true);
-			//expect($scope.page.heading).toBe('About Us');
+			
 		});
-		it("should set the page heading to 'Contact Us'", function()
+		it("should set the page heading to 'Contact Us'", function($controller)
 		{
-			//expect(true).toBe(true);
-			expect($scope.page.heading).toBe('Contact Us');
+			expect($controller('ContactCtrl')($scope.page.heading)).toBe('Contact Us');
 		});
 	});
 });
+

@@ -20,7 +20,7 @@
 
 	app.register.controller('ContactCtrl', ContactCtrl);
 */
-	app.controller('ContactCtrl', ['$scope', function($scope)
+	app.register.controller('ContactCtrl', ['$scope', function($scope)
     {
         $scope.page =
         {

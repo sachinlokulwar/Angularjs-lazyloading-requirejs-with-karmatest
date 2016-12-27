@@ -14,13 +14,13 @@ define([], function () {
                 
                 var routeDef = {};
                 
-                routeDef.templateUrl = routeObj.templateUrl
+                routeDef.templateUrl = routeObj.templateUrl;
                 
-                routeDef.controller = routeObj.controller
+                routeDef.controller = routeObj.controller;
                
                 routeDef.resolve = {
                     load: ['$q', '$rootScope', function ($q, $rootScope) {
-                        //var dependencies = [routeConfig.getControllersDirectory() + path + baseFileName + '.js'];
+                        
                         return resolveDependencies($q, $rootScope, routeObj.dependencies);
                     }]
                 };
